@@ -1,22 +1,90 @@
 \chapter{Introduction}
 
-\section{Lecture 1 - 1/10/24}
+\section{The Standard Topology on Euclidean Space}
 Topology, from the greek \textit{topos}, meaning "place" or "locality", and \textit{logos} meaning "study", can be thought of as the study of shape. More specifically, the study of how geometric objects behave under continuous deformations.
 
 There are a variety of different (equivalent) approaches to topology, including but not limited open sets, neighborhoods, metrics, convergence of sequences, and continuity of functions. All of the preceding are discussed in this course, but we will rely heavily on the concept of open sets. Before getting to the subject, we review some important fundamentals.
 
 Firstly, we denote the set of real numbers as $\mathbb{R}$, and the set of $d$-tuples as $\mathbb{R}^{d}$. The latter of these sets is sometimes referred to as "Euclidean $d$-space".
 
-\dfn{The (Standard) Inner Product and (Standard) Norm}{Let $\textbf{x} = (x_1,...,x_d), \textbf{y}=(y_1,...,y_d)\in\mathbb{R}$. The standard inner product is a map $f:\mathbb{R}^d\times\mathbb{R}^d\to\mathbb{R}$ defined by
+\dfn{The (Standard) Inner Product and (Standard) Norm}{Let $x = (x_1,...,x_d), y=(y_1,...,y_d)\in\mathbb{R}$. The standard inner product is a map $f:\mathbb{R}^d\times\mathbb{R}^d\to\mathbb{R}$ defined by
 $$f(x,y) = \langle x,y\rangle = x_1y_1+...x_dy_d$$
 We then define the (standard) norm as a function $g:\mathbb{R}^d\to\mathbb{R}$ as 
 $$g(x) = ||x|| = \sqrt{\langle x,x\rangle} = \sqrt{x_1^2+...x_d^2}$$}
+\thm{}{$For all x,x',y,y'\in\mathbb{R}^d$ the following properties regarding the inner product hold
+\begin{enumerate}
+	\item Bilinearity:
+	$$\langle\lambda x+\lambda'x', \mu y+ \mu'y'\rangle = \lambda\mu\langle x,y\rangle + \lambda'\mu\langle x'y\rangle + \lambda\mu' \langle x,y'\rangle + \lambda'\mu'\langle x',y'\rangle$$
+	\item Symmetry:
+	$$\langle x, y\rangle = \langle y,x\rangle$$
+	\item Positivity:
+	$$\langle x,x\rangle \geq 0 \text{ with equality if and only if } x=0$$
+	\item Cauchy Schwarz Inequality:
+	$$|\langle x,y\rangle|\leq ||x|| \,||y||, \text{ with equality if and only if } x \parallel y$$
+	\item Triangle Inequality:
+	$$||x+y||\leq ||x|| + ||y||, \text{ with equality if and only } y=0 \text{ or } \exists a\geq 0 \text{ s.t. } x=ay$$
+\end{enumerate}}
+
+\begin{myproof}
+	TODO: prove the above statements from definition
+\end{myproof}
 
 
-\dfn{Limit of Sequence in $\bs{\bbR^n}$}{Let $\{s_n\}$ be a sequence in $\bbR^n$. We say $$\lim_{n\to\infty}s_n=s$$ where $s\in\bbR^n$ if $\forall$ real numbers $\eps>0$ $\exists$ natural number $N$ such that for $n>N$ $$\|s-s_n\|<\eps$$}
-The same definition works if we interpret $\|v\|=$ length of the vector $v$.
 
-From school, for v=$v_1,v_2,\cdots,v_n$ we had $$\|v\|=\sqrt{v_1^2+v_2^2+\cdots+v_n^2}$$But it will be useful to have a more general notion of length (of which the above will be an example)
+\dfn{The (Standard) Metric on $\mathbb{R}^d$}{The (standard) metric on $\mathbb{R}^d$ is a map $d:\mathbb{R}^d\times\mathbb{R}^d\to\mathbb{R}$ such that $\forall x,y\in\mathbb{R}$
+$$d(x,y) = ||x-y||$$}
+
+\thm{}{For all $x,y,z\in\mathbb{R}$, the following properties regarding the (standard) metric hold:
+\begin{enumerate}
+	\item Positivity:
+	$$d(x,y)\geq 0\text{ with equality if and only if }x=y$$
+	\item Symmetry:
+	$$d(x,y) = d(y,x)$$
+	\item Triangle Inequality
+	$$d(x,z)\leq d(x,y)+d(y,z)$$
+\end{enumerate}}
+\begin{myproof}
+TODO: prove above statements from definition.
+\end{myproof}
+
+\dfn{(Standard) Open Ball and Closed Ball}{Let $x\geq 0$ and $R\geq0$. Then the (standard) open ball is the set
+$$B(x, R) = \{y\in\mathbb{R}^d| d(x,y)<R\}$$
+and the (standard) close ball is the set
+$$\barB(x,R) = \{y\in\mathbb{R}^d| d(x,y)\leq R\}$$}
+In $\mathbb{R}$, $B(x,R)$ is just the open interval $(x-R, x+R)$. In $\mathbb{R}^2$, $B(x,R)$ is the interior of the circle centered at $x$ of radius $R$. In $\mathbb{R}^3$, $B(x,R)$ is the the interior of the sphere centered at $x$ of radius $R$. The closed counterparts of these sets include the boundaries of the described sets.
+
+\dfn{Neighborhoods in $\mathbb{R}^d$}{Let $U\subset\mathbb{R}^d$ and $x\in U$. Then $U$ is a \textbf{neighborhood} of $x$ if it contains a nonempty ball centered at $x$, i.e. if
+$$\exists\epsilon > 0, B(x,\epsilon)\subset U$$
+Additionally, $U$ is a (standard) open ball of $\mathbb{R}^d$ if it is a neighborhood of all its points, i.e.
+$$\forall y\in U,\exists \epsilon > 0, B(x,\epsilon)\subset U$$}
+
+\begin{note}
+	\begin{enumerate}
+		\item $\empty$ and $\mathbb{R}$ are open.
+		\item Open balls are open.
+	\end{enumerate}
+\end{note}
+
+\begin{proof}
+	TODO: prove the statements in the note
+\end{proof}
+
+\thm{}{
+	\begin{enumerate}
+		\item Let $(V_\alpha)_{\alpha\in I}$ be a (possibly infinite) family of open subsets of $\mathbb{R}^d$. Then $\bigcup_{\alpha\in I}V_\alpha$ is open.
+		\item Let $V_1,...,V_n\in\mathbb{R}^d$ be open. Then $V_1\cap...\cap V_n$ is open.
+	\end{enumerate}
+}
+
+\begin{proof}
+	TODO: prove the above statements
+\end{proof}
+
+\ex{}{The set $U = \{(x_1,...,x_d)\in\mathbb{R}^d|x_d > 0\}$ is an open subset of $\mathbb{R}^d$.\\
+\begin{myproof}
+	Let $x\in U$ and set $\epsilon = x_d$. We then want to show that $B(x,\epsilon)\subset U$. Let $y\in B(x,\epsilon)$. Then $|x_d - y_d|\leq ||x-y|| = \sqrt{|x_1-y_1|^2+...+|x_d-y_d^2|}$
+\end{myproof}}
+
 \section{Defination}
 \dfn{\label{norm}Normed Linear Space and Norm $\boldsymbol{\|\cdot\|}$}{Let $V$ be a vector space over $\bbR$ (or $\bbC$). A norm on $V$ is function $\|\cdot\|\ V\to \bbR_{\geq 0}$ satisfying \begin{enumerate}[label=\bfseries\tiny\protect\circled{\small\arabic*}]
 		\item \label{n:1}$\|x\|=0 \iff x=0$ $\forall$ $x\in V$

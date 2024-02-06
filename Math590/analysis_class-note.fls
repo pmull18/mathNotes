@@ -1318,6 +1318,8 @@ INPUT /Users/patrickmullen/Documents/mathNotes/math590/ch01-norm.tex
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmr17.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmti10.tfm
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmssbx10.tfm
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmbxti10.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmbx7.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmbx5.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmmib10.tfm
@@ -1327,7 +1329,6 @@ INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmbsy10.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy7.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy5.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmbx9.tfm
-INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmbxti10.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm
 INPUT /Users/patrickmullen/Documents/mathNotes/math590/ch02-metric-space.tex
 INPUT /Users/patrickmullen/Documents/mathNotes/math590/ch02-metric-space.tex
@@ -1343,7 +1344,6 @@ INPUT /Users/patrickmullen/Documents/mathNotes/math590/ch02-metric-space.tex
 INPUT /Users/patrickmullen/Documents/mathNotes/math590/ch02-metric-space.tex
 INPUT /Users/patrickmullen/Documents/mathNotes/math590/ch02-metric-space.tex
 INPUT /Users/patrickmullen/Documents/mathNotes/math590/ch02-metric-space.tex
-INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmssbx10.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmssbx10.tfm
 INPUT /Users/patrickmullen/Documents/mathNotes/math590/ch03-metric-space-continuity.tex
 INPUT /Users/patrickmullen/Documents/mathNotes/math590/ch03-metric-space-continuity.tex
