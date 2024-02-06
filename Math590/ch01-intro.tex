@@ -199,37 +199,11 @@ Moreover, $\forall U\subset X, U$ is open if and only if $U$ is a neighborhood o
 
 
 \section{Sequences in Topological Spaces}
+While the sequences we study are not remarkably different than those encountered in the typical analysis course, we will generalize the concept slightly, especially in regards to the definition of convergence of sequences.
 
-draw an ordinary circle around the origin then no matter how small the circle the points of the sequence are eventually land inside the circle. If instead of that circle can same be said for diamond w.r.t norm 2. Then i can take circle that is inside that diamond. Same is true for $\infty-$norm. Hence convergence with respect to all norm $1$ and norm 2 and even $\infty$ results for convergence.
+\dfn{Convergence of Sequences}{Let $(X,\mcT)$ be a topological space, $(x_n)_{n}$ in $X$ and $x\in X$. We say that $x_n\to x$ if
+$$\forall N\text{ a neighborhood }, \exists n_0\in\mathbb{R} \text{ such that }\forall n > n_0, x_n\in N$$}
 
-
-
-
-
-
-Now there is no reason why we can not consider a norm on an infinite dimensional vector space. It will work. Perhaps i can define only for some sequences where the morm converges. \ex{}{Suppose for set of all bounded infinite sequences a vector space because every number in a vector is less than some number so if you add two vectors then add the bound and if you scale then scale the bound. Now the $\infty$ norm works on that.
-
-	Now suppose you take all continuous real valued functions on closed interval $[0,1]$, such a function is bounded and this is a vector space and we can define $\infty-$norm even for that because for all $f$ in this space attains its maximum value so just take that maximum value. Its an extremely infinite dimensional space.
+\ex{}{Let $X=\{0,1,2\}$ and $\mcT = \{\emptyset, X, \{0\}, \{0,1\}\}$. Then $x_n\to 1$ if and only if $\exists n_0\in\mathbb{R}$ such that $\forall n > n_0, x_n = 0$ or $1$. In particular $0\to 1$.}
 
 
-}
-
-\begin{note}
-	$\bbR^{\infty}$ is the space of all sequences.
-\end{note}
-
-\qs{}{\label{exs2}Modify the above proof for field $\bbC$}
-\qs{}{\label{exs3}Show that the following are normed linear spaces.\begin{enumerate}[label=(\alph*)]
-		\item $l^{\infty}=$ Set of all bounded infinite sequences $(x_1,x_2,\cdots)$ $x_i\in\bbR$ with norm $\|x\|=\sup |x_i|$
-		\item $C[0,1]=$ Set of all continuous functions $[0,1]\to \bbR$ with norm $\|f\|=\sup\limits_{x\in[0,1]}|f(x)|$
-	\end{enumerate}
-}
-\section{Limit of a Sequence}
-\dfn{Limit of Sequence in Normed Linear Space}{A sequence  $\{s_n\}$ in a normed linear space $V$ converge to $s$ means $\forall$ real number $\eps>0$ $\exists$ natural number $N$ such that for $\forall\ n>N$ $\|s-s_n\|<\eps$}
-\section{Continuity}
-\dfn{Continuity in Normed Linear Space}{Let $S$ be a subset of $V$ and $f:\ S\to W$ where $V,W$ are normed linear space. $f$ is continuous at $v\in V$ means $\forall$ $\eps>0$, $\exists$ $\delta>0$, st whenever $\|x-v\|<\delta$ for $x\in S$ one has $\|f(x)-f(v)\|<\eps$}
-Distance in a normed linear space for $x,y\in V$ is $$d(x,y)=\|x,y\|$$ Hence properties of this $d$ are\begin{enumerate}[label=\bfseries\tiny\protect\circled{\small\arabic*}]
-	\item[\ref{n:1}] \label{m:1} $d(x,y)=0 \iff x=y$
-	\item[\ref{n:2}] \label{m:2} $d(\lambda x,\lambda y)=|\lambda|d(x,y)$ for any scalar $\lambda$
-	\item[\ref{n:3}] \label{m:3} $d(u,v)+d(u,v)\geq d(u,w)$
-\end{enumerate}
