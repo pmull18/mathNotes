@@ -11,7 +11,7 @@ Firstly, we denote the set of real numbers as $\mathbb{R}$, and the set of $d$-t
 $$f(x,y) = \langle x,y\rangle = x_1y_1+...x_dy_d$$
 We then define the (standard) norm as a function $g:\mathbb{R}^d\to\mathbb{R}$ as 
 $$g(x) = ||x|| = \sqrt{\langle x,x\rangle} = \sqrt{x_1^2+...x_d^2}$$}
-\thm{}{$For all x,x',y,y'\in\mathbb{R}^d$ the following properties regarding the inner product hold
+\thm{}{For all $x,x',y,y'\in\mathbb{R}^d$ the following properties regarding the inner product hold
 \begin{enumerate}
 	\item Bilinearity:
 	$$\langle\lambda x+\lambda'x', \mu y+ \mu'y'\rangle = \lambda\mu\langle x,y\rangle + \lambda'\mu\langle x'y\rangle + \lambda\mu' \langle x,y'\rangle + \lambda'\mu'\langle x',y'\rangle$$
@@ -85,7 +85,60 @@ $$\forall y\in U,\exists \epsilon > 0, B(x,\epsilon)\subset U$$}
 	Let $x\in U$ and set $\epsilon = x_d$. We then want to show that $B(x,\epsilon)\subset U$. Let $y\in B(x,\epsilon)$. Then $|x_d - y_d|\leq ||x-y|| = \sqrt{|x_1-y_1|^2+...+|x_d-y_d^2|}$
 \end{myproof}}
 
-\dfn{The Standard Topology on $\mathbb{R}$}{The Standard Topology on $\mathbb{R}^d$ is defined as the collection of open subsets of $\mathbb{R}^d$.}
+\begin{note}
+	The collection of open subsets of $\mathbb{R}^d$ is called the Standard Topology on $\mathbb{R}^d$.
+\end{note}
+
+\dfn{Convergence of Sequences in $\mathbb{R}^d$}{Let $(x_n)_{n\geq 0}$ be a sequence in $\mathbb{R}^d$. We say $\displaystyle x_n\to_x$ or $\displaystyle\lim_{n\to\infty}x_n=x$ if 
+$$\forall\epsilon>0,\exists n_0\in\mathbb{R}\text{ such that }\forall n>n_0, d(x_n,x)<\epsilon$$
+Note that $d(x_n,x)<\epsilon$ is equivalent to $x_n\in B(x,\epsilon)$.}
+
+\ex{}{$\displaystyle\lim_{n\to\infty}\frac{1}{n} = 0$\\ TODO: Proof}
+
+\thm{}{Let $x\in\mathbb{R}$ and $(x_n)_{n\geq 0}$ a sequence in $\mathbb{R}^d$. Then
+$$\lim_{n\to\infty}x_n = x \iff \forall V \text{ nbhd of }x,\exists n_0\in\mathbb{R}\text{ such that } \forall n>n_0, x_n\in V$$}
+
+\begin{myproof}
+	$(\implies)$: Assume $\lim_{n\to\infty}x_n = x$. Let $V$ be a neighborhood of $x$. Then, by the definition of neighborhood, $\exists\epsilon>0$ such that $B(x,\epsilon)\subset V$. Then, by the definition of convergence, $\exists n_0\in\mathbb{R}$ such that $\forall n > n_0, x_n\in B(x,\epsilon)$. Then, since $B(x,\epsilon)\subset V$, we have $\forall n > n_0, x_n\in V$. Then, since $V$ is arbitrary, $\forall V$ a neighborhood of $x, \exists n_0\in\mathbb{R}, \forall n> n_0, x_n\in V$. Therefore,
+	$$\lim_{n\to\infty}x_n = x \implies \forall V \text{ nbhd of }x,\exists n_0\in\mathbb{R}\text{ such that } \forall n>n_0, x_n\in V$$
+
+	$(\impliedby)$ Assume $\forall V \text{ nbhd of }x,\exists n_0\in\mathbb{R}$ such that $ \forall n>n_0, x_n\in V$. Let $\epsilon > 0$. We know that $B(x,\epsilon)$ is a neighborhood of $x$. Then, by our assumption, $\exists n_0\in\mathbb{R}$ such that $\forall n>n_0, x\in B(x,\epsilon)$. Therefore, by the definition of convergence, $\lim_{n\to\infty}x_n = x$. Therefore,
+	$$\lim_{n\to\infty}x_n = x \impliedby \forall V \text{ nbhd of }x,\exists n_0\in\mathbb{R}\text{ such that } \forall n>n_0, x_n\in V$$
+\end{myproof}
+
+\dfn{Continuity of Functions from $\mathbb{R}^d$ to $\mathbb{R}^k$}{A map $f:\mathbb{R}^d\to\mathbb{R}^k$ is \textbf{continuous at $x\in\mathbb{R}^d$} if 
+$$\forall\epsilon > 0,\exists\delta > 0 \text{ such that } \forall y\in B(x,\delta), d(f(x),f(y))<\epsilon$$
+Note that $d(f(x),f(y))<\epsilon$ is equivalent to $f(y)\in B(f(y),\epsilon)$, so $f$ is continuous if 
+$$\forall\epsilon > 0,\exists\delta > 0 \text{ such that } \forall y\in B(x,\delta), f(y)\in B(f(y),\epsilon)$$
+Another, equivalent definition is that $f$ is continuous if 
+$$\forall\epsilon > 0,\exists\delta > 0 \text{ such that } f(B(x,\delta))\subset B(f(x),\epsilon)$$
+We say that $f$ is \textbf{continuous} if it is continuous at every point.}
+
+\ex{}{
+\begin{enumerate}
+	\item Let $v\in\mathbb{R}^d$ and let $f:\mathbb{R}^d\to\mathbb{R}^d$ defined by the rule $x\mapsto x+v$ is continuous on $\mathbb{R}^d$.\\
+	Let $x\in\mathbb{R}^d$ and let $\epsilon>0$. Set $\delta = \epsilon$. We then want to show that $f(B(x,\delta))\subset B(f(x),\epsilon)$. Let $y\in B(x,\delta)$. Then 
+	$$d(f(y),f(x)) = ||f(y)-f(x)|| = ||y+v-(x+v)|| = ||y-x||<\delta = \epsilon$$
+	Therefore, $f(y)\in B(f(x),\epsilon)$.
+	\item TODO: fill in remaining examples
+\end{enumerate}
+}
+
+\thm{}{Let $f:\mathbb{R}^d\to\mathbb{R}^k$. Then the following statements hold
+\begin{enumerate}
+	\item $f$ is continuous at $x\in\mathbb{R}^d \iff \forall V$ neighborhood of $f(x), f^{-1}(V)$ is a neighborhood of $x$.
+	\item $f$ is continuous on $\mathbb{R}^d \iff \forall U\subset\mathbb{R}^d$ open, $f^{-1}(U)\subset\mathbb{R}^k$ is open.
+	\item $f$ is continuous at $x\in\mathbb{R}^d\iff\forall (x_n)_{n\geq 0}$ in $\mathbb{R}^d$ converging to $x$, $f(x_n)\to f(x)$ as $n\to \infty$. 
+\end{enumerate}
+}
+
+\begin{myproof}
+	TODO: complete proof of above statements
+\end{myproof}
+
+\dfn{Open Subset}{Let $X\subset\mathbb{R}^d$. A subset $U\subset X$ is \textbf{open in $X$} if $\forall x\in U,\exists\epsilon>0$ such that $B(x,\epsilon)\cap X\subset U$.}
+
+A Topology of $X$, then, is a collection of subsets of 
 
 \section{Defination}
 \dfn{\label{norm}Normed Linear Space and Norm $\boldsymbol{\|\cdot\|}$}{Let $V$ be a vector space over $\bbR$ (or $\bbC$). A norm on $V$ is function $\|\cdot\|\ V\to \bbR_{\geq 0}$ satisfying \begin{enumerate}[label=\bfseries\tiny\protect\circled{\small\arabic*}]
