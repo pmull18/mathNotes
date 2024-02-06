@@ -138,9 +138,26 @@ We say that $f$ is \textbf{continuous} if it is continuous at every point.}
 
 \dfn{Open Subset}{Let $X\subset\mathbb{R}^d$. A subset $U\subset X$ is \textbf{open in $X$} if $\forall x\in U,\exists\epsilon>0$ such that $B(x,\epsilon)\cap X\subset U$.}
 
-A Topology of $X$, then, is a collection of subsets of 
+A Topology of $X$, then, is a collection of subsets of $X$ that are open in $X$. This definition will be expanded and made rigorous later in the course.
 
-\section{Defination}
+\ex{Torus}{TODO: insert torus example here (preferable with illustration)}
+
+\dfn{Homeomorphism}{Let $X,Y\subset\mathbb{R}^d$ be subsets. Then $X,Y$ are \textbf{homeomorphic} if $\exists f:X\to Y$ a bijection such that
+$$\forall U\subset X, U\text{ is open in } X\iff f(U)\text{ open in } Y$$
+The function $f$ is called a \textbf{homeomorphism}.}
+
+\section{General Topologies}
+
+\dfn{Topology}{Let $X$ be a set. A \textbf{topology} on $X$ is a collection $\mcT\subset\mathcal{P}(X)$ of subsets of $X$ called \textbf{open subsets} such that
+\begin{enumerate}
+	\item $\emptyset, X\in\mathcal{T}$
+	\item Stability under unions. For any $(U_{\alpha})_{\alpha\in I}$ of elements of $\mathcal{T}$, $\bigcup_{\alpha\in I}U_{\alpha}$ is also an element of $\mathcal{T}$.
+	\item Stability under finite intersection. For any $U_1,...,U_n\in\mathcal{T}$, we have $U_1\cap...\cap U_n\in\mathcal{T}$.
+\end{enumerate}
+The pair $(X,d)$ is called a \textbf{topological space}.
+}
+
+
 \dfn{\label{norm}Normed Linear Space and Norm $\boldsymbol{\|\cdot\|}$}{Let $V$ be a vector space over $\bbR$ (or $\bbC$). A norm on $V$ is function $\|\cdot\|\ V\to \bbR_{\geq 0}$ satisfying \begin{enumerate}[label=\bfseries\tiny\protect\circled{\small\arabic*}]
 		\item \label{n:1}$\|x\|=0 \iff x=0$ $\forall$ $x\in V$
 		\item \label{n:2}	$\|\lambda x\|=|\lambda|\|x\|$ $\forall$ $\lambda\in\bbR$(or $\bbC$), $x\in V$
