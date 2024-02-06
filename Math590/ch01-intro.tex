@@ -201,9 +201,21 @@ Moreover, $\forall U\subset X, U$ is open if and only if $U$ is a neighborhood o
 \section{Sequences in Topological Spaces}
 While the sequences we study are not remarkably different than those encountered in the typical analysis course, we will generalize the concept slightly, especially in regards to the definition of convergence of sequences.
 
-\dfn{Convergence of Sequences}{Let $(X,\mcT)$ be a topological space, $(x_n)_{n}$ in $X$ and $x\in X$. We say that $x_n\to x$ if
+\dfn{Convergence and Continuity}{Let $(X,\mcT)$ be a topological space, $(x_n)_{n}$ in $X$ and $x\in X$. We say that $x_n\to x$ if
 $$\forall N\text{ a neighborhood }, \exists n_0\in\mathbb{R} \text{ such that }\forall n > n_0, x_n\in N$$}
 
 \ex{}{Let $X=\{0,1,2\}$ and $\mcT = \{\emptyset, X, \{0\}, \{0,1\}\}$. Then $x_n\to 1$ if and only if $\exists n_0\in\mathbb{R}$ such that $\forall n > n_0, x_n = 0$ or $1$. In particular $0\to 1$.}
 
+\thm{}{Let $(X,\mcT)$ be a topological space. Let $(x_n)_{n\geq 0}$ be a sequence in $X$ that is constant after some time: $\exists n_0\geq 0$ integer such that $x_n=x_{n_0} \forall n\geq n_0$. Then $x_n\to x_{n_0}$ as $n\to\infty$.}
+\begin{myproof}
+	Let $N$ be a neighborhood of $x_{n_0}$. Then $\forall n\geq n_0, x_n = x_{n_0}$, so $x_n\to x_{n_0}$.
+\end{myproof}
 
+\dfn{Continuity}{Let $(X,\mcT)$ and $(Y, \mcT')$ be topological spaces. A map $f:X\to Y$ is called continuous if $$\forall U\subset Y \text{ open } f^{-1}(U)\subset X \text{ is open}$$}
+
+\thm{}{$f:\mathbb{R}^d\to\mathbb{R}^k$ is continuous if and only if $\forall x\in\mathbb{R}^d,\forall\epsilon > 0,\exists\delta < 0$ such that $f(B(x,\delta))\subset B(f(x),\epsilon)$.}
+
+\begin{myproof}
+	$(\implies)$ Assume that $f:\mathbb{R}^d\to\mathbb{R}^k$ is continuous. Let $x\in\mathbb{R}^d$ and $\epsilon>0$. We know $B(f(x),\epsilon)$. We know $B(f(x),\epsilon)$ is open, so $f^{-1}(B(x,\epsilon))$ is open by continuity. Then, since $x\in f^{-1}(B(x,\epsilon)),\exists\delta > 0$ such that $B(x,\delta)\subset f^{-1}(B(f(x),\epsilon))$. Then, $f(B(x,\delta))\subset B(f(x),\epsilon)$. \\ 
+	$(\impliedby)$ Assume $\forall x\in\mathbb{R}^d,\forall\epsilon > 0,\exists\delta < 0$ such that $f(B(x,\delta))\subset B(f(x),\epsilon)$. Let $U\subset\mathbb{R}^d$ be open. Then, for $f$ to be continuous we want to show that $f^{-1}(U) is open. Let $x\in f^{-1}(U)$
+\end{myproof}
