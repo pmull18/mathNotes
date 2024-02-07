@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.1.9)  6 FEB 2024 01:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.1.9)  7 FEB 2024 14:20
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/Users/patrickmullen/Documents/mathNotes/math590/topology_class-note.tex
-(/Users/patrickmullen/Documents/mathNotes/math590/topology_class-note.tex
+**/Users/patrickmullen/Documents/mathNotes/Math590/topology_class-note.tex
+(/Users/patrickmullen/Documents/mathNotes/Math590/topology_class-note.tex
 LaTeX2e <2020-10-01> patch level 4
 L3 programming layer <2021-02-18> (/usr/local/texlive/2021/texmf-dist/tex/latex/base/report.cls
 Document Class: report 2020/04/10 v1.4m Standard LaTeX document class
@@ -23,7 +23,7 @@ File: size10.clo 2020/04/10 v1.4m Standard LaTeX file (size option)
 \abovecaptionskip=\skip47
 \belowcaptionskip=\skip48
 \bibindent=\dimen138
-) (/Users/patrickmullen/Documents/mathNotes/math590/preamble.tex (/usr/local/texlive/2021/texmf-dist/tex/latex/geometry/geometry.sty
+) (/Users/patrickmullen/Documents/mathNotes/Math590/preamble.tex (/usr/local/texlive/2021/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
  (/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
@@ -793,7 +793,7 @@ File: tikzlibraryshadows.code.tex 2020/12/27 v3.1.8b (3.1.8b)
  (/usr/local/texlive/2021/texmf-dist/tex/latex/titlesec/titletoc.sty
 Package: titletoc 2019/10/16 v2.13 TOC entries
 \ttl@leftsep=\dimen318
-)) (/Users/patrickmullen/Documents/mathNotes/math590/macros.tex) (/Users/patrickmullen/Documents/mathNotes/math590/letterfonts.tex) (/Users/patrickmullen/Documents/mathNotes/math590/topology_class-note.aux (/Users/patrickmullen/Documents/mathNotes/math590/ch01-intro.aux) (/Users/patrickmullen/Documents/mathNotes/math590/ch02-metric-space.aux) (/Users/patrickmullen/Documents/mathNotes/math590/ch03-metric-space-continuity.aux) (/Users/patrickmullen/Documents/mathNotes/math590/ch04-norm-eq.aux) (/Users/patrickmullen/Documents/mathNotes/math590/ch05-compactness.aux))
+)) (/Users/patrickmullen/Documents/mathNotes/Math590/macros.tex) (/Users/patrickmullen/Documents/mathNotes/Math590/letterfonts.tex) (/Users/patrickmullen/Documents/mathNotes/Math590/topology_class-note.aux (/Users/patrickmullen/Documents/mathNotes/Math590/ch01-intro.aux) (/Users/patrickmullen/Documents/mathNotes/Math590/ch02-metric-space.aux) (/Users/patrickmullen/Documents/mathNotes/Math590/ch03-metric-space-continuity.aux) (/Users/patrickmullen/Documents/mathNotes/Math590/ch04-norm-eq.aux) (/Users/patrickmullen/Documents/mathNotes/Math590/ch05-compactness.aux))
 \openout1 = `topology_class-note.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
@@ -907,7 +907,7 @@ LaTeX Font Warning: Font shape `OT1/cmr/bx/sc' undefined
 
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
-(/Users/patrickmullen/Documents/mathNotes/math590/topology_class-note.toc
+(/Users/patrickmullen/Documents/mathNotes/Math590/topology_class-note.toc
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
@@ -922,7 +922,7 @@ Missing character: There is no ; in font nullfont!
 ]
 \openout2 = `ch01-intro.aux'.
 
- (/Users/patrickmullen/Documents/mathNotes/math590/ch01-intro.tex
+ (/Users/patrickmullen/Documents/mathNotes/Math590/ch01-intro.tex
 Chapter 1.
 [4
 
@@ -932,53 +932,53 @@ Underfull \hbox (badness 10000) in paragraph at lines 86--86
 
  []
 
-[6] [7] [8] [9]) [10]
+[6] [7] [8] [9] [10]) [11]
 \openout2 = `ch02-metric-space.aux'.
 
- (/Users/patrickmullen/Documents/mathNotes/math590/ch02-metric-space.tex
+ (/Users/patrickmullen/Documents/mathNotes/Math590/ch02-metric-space.tex
 Chapter 2.
 
-LaTeX Warning: Reference `n:1' on page 11 undefined on input line 8.
+LaTeX Warning: Reference `n:1' on page 12 undefined on input line 8.
 
-[11
-
-
+[12
 
 
-] [12] [13] [14] [15]) [16]
+
+
+] [13] [14] [15] [16]) [17]
 \openout2 = `ch03-metric-space-continuity.aux'.
 
- (/Users/patrickmullen/Documents/mathNotes/math590/ch03-metric-space-continuity.tex
+ (/Users/patrickmullen/Documents/mathNotes/Math590/ch03-metric-space-continuity.tex
 Chapter 3.
-[17
+[18
 
 
 
 
-] [18] [19]) [20]
+] [19] [20]) [21]
 \openout2 = `ch04-norm-eq.aux'.
 
- (/Users/patrickmullen/Documents/mathNotes/math590/ch04-norm-eq.tex
+ (/Users/patrickmullen/Documents/mathNotes/Math590/ch04-norm-eq.tex
 Chapter 4.
 
-LaTeX Warning: Hyper reference `norm' on page 21 undefined on input line 4.
+LaTeX Warning: Hyper reference `norm' on page 22 undefined on input line 4.
 
-[21
-
-
+[22
 
 
-] [22]) [23]
+
+
+] [23]) [24]
 \openout2 = `ch05-compactness.aux'.
 
- (/Users/patrickmullen/Documents/mathNotes/math590/ch05-compactness.tex
+ (/Users/patrickmullen/Documents/mathNotes/Math590/ch05-compactness.tex
 Chapter 5.
-[24
+[25
 
 
 
 
-] [25] [26] [27] [28] [29]) [30] (/Users/patrickmullen/Documents/mathNotes/math590/topology_class-note.aux (/Users/patrickmullen/Documents/mathNotes/math590/ch01-intro.aux) (/Users/patrickmullen/Documents/mathNotes/math590/ch02-metric-space.aux) (/Users/patrickmullen/Documents/mathNotes/math590/ch03-metric-space-continuity.aux) (/Users/patrickmullen/Documents/mathNotes/math590/ch04-norm-eq.aux) (/Users/patrickmullen/Documents/mathNotes/math590/ch05-compactness.aux))
+] [26] [27] [28] [29] [30]) [31] (/Users/patrickmullen/Documents/mathNotes/Math590/topology_class-note.aux (/Users/patrickmullen/Documents/mathNotes/Math590/ch01-intro.aux) (/Users/patrickmullen/Documents/mathNotes/Math590/ch02-metric-space.aux) (/Users/patrickmullen/Documents/mathNotes/Math590/ch03-metric-space-continuity.aux) (/Users/patrickmullen/Documents/mathNotes/Math590/ch04-norm-eq.aux) (/Users/patrickmullen/Documents/mathNotes/Math590/ch05-compactness.aux))
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -987,18 +987,18 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 42018 strings out of 478994
- 982459 string characters out of 5858185
- 1470975 words of memory out of 5000000
- 58544 multiletter control sequences out of 15000+600000
+ 42045 strings out of 478994
+ 982845 string characters out of 5858185
+ 1470986 words of memory out of 5000000
+ 58554 multiletter control sequences out of 15000+600000
  422827 words of font info for 96 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  117i,15n,119p,883b,1791s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on /Users/patrickmullen/Documents/mathNotes/math590/topology_class-note.pdf (30 pages, 447169 bytes).
+Output written on /Users/patrickmullen/Documents/mathNotes/Math590/topology_class-note.pdf (31 pages, 458536 bytes).
 PDF statistics:
- 755 PDF objects out of 1000 (max. 8388607)
- 601 compressed objects within 7 object streams
- 223 named destinations out of 1000 (max. 500000)
- 579 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 783 PDF objects out of 1000 (max. 8388607)
+ 627 compressed objects within 7 object streams
+ 240 named destinations out of 1000 (max. 500000)
+ 587 words of extra memory for PDF output out of 10000 (max. 10000000)
 
