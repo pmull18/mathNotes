@@ -299,5 +299,46 @@ TODO: Prove}
 	Let $x_1,x_2\in\mathbb{R}^d, r_1,r_2\geq 0$. Let $x_3\in B(x_1,r_1)\cap B(x_2, r_2)$. Set $r_3 = \min(r_1 - d(x_1,x_3),r_2 - d(x_2,x_3))$. Then $B(x_3, r_3)\subset B(x_1,r_1)\cap B(x_2,r_2)$.
 	Therefore, $\mcB$ is a basis for $\mcT$.
 \end{myproof}
-
 }
+
+\begin{note}
+	Note that any topology satisfies the conditions for being a basis.
+\end{note}
+
+\ex{}{On $\mathbb{R}, \mcB = \{[x,y)|x<y\in\mathbb{R}\}$ is a basis.
+
+\begin{myproof}
+	\begin{enumerate}
+		\item $\displaystyle\mathbb{R} = \bigcup_{i\in\mathbb{R}} [t,t+1)$
+		\item Let $B_1 = [x_1,y_1)$ and $B_2 = [x_2,y_2)\subset\mathbb{R}$. Let $x\in B_1\cap B_2$. Then we have
+		$$ \max(x_1,x_2)\leq x < \min(y_1,y_2) $$
+		so take $x_3 = \max(x_1,x_2)$, and $y_3 = \min(y_1,y_2)$. Then
+		$$ x_3\leq x < y_3$$
+		Let $B_3 = [x_3,y_3)$. Then $x\in B_3\subset B_1\cap B_2$.
+	\end{enumerate}
+
+	Therefore, $\mcB$ is a basis of $\mathbb{R}$.
+\end{myproof}}
+
+\thm{}{
+	Let $X$ be a set, and $\mcT\subset\mcP(x)$. Then $\mcT$ is a topology if and only if the following hold:
+	\begin{enumerate}
+		\item $\emptyset, X\in\mcT$
+		\item $\mcT$ is stable under union
+		\item $\forall U,V\in\mcT, U\cap V\in\mcT$
+	\end{enumerate}
+}
+To prove the above theorem, the forward direction is tribial. For the reverse direction, the first two conditions are also just assumed, and the proofs of those statements are trivial. For the third condition, we simply need to induct on $n$ to demonstrate stability under finite intersection. Providing a rigorous proof is left as an exercise to the reader.
+
+\thm{}{
+	Let $(X,\mcT)$ be a topological space, and let $\mcB\subset\mcT$. Then $\mcB$ is a basis for $\mcT$ if and only if
+	$$ \forall U\in\mcT, \forall x\in U, \exists B\in\mcB \text{ such that } x\in B\subset U $$
+}
+
+\begin{myproof}
+	$(\implies)$ Assume that $\mcB$ is a basis for $\mcT$.Let $\mcT'$ be the collection of all $U\subset X$ such that $(\forall x\in U, \exists B\in\mcB$ such that $x\in B\subset U)$. Clearly, $\mcB\subset\mcT'$. We then want to show that $\mcT'$ is a topology.
+	\begin{enumerate}
+		\item $\emptyset\in\mcT'$ and $X\in\mcT'$ since $X = \bigcup_{B\in\mcB}B$
+	\end{enumerate}
+\end{myproof}
+
