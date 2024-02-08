@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.1.9)  7 FEB 2024 16:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.1.9)  7 FEB 2024 23:19
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -932,53 +932,53 @@ Underfull \hbox (badness 10000) in paragraph at lines 86--86
 
  []
 
-[6] [7] [8] [9] [10] [11]) [12]
+[6] [7] [8] [9] [10] [11] [12]) [13]
 \openout2 = `ch02-metric-space.aux'.
 
  (/Users/patrickmullen/Documents/mathNotes/Math590/ch02-metric-space.tex
 Chapter 2.
 
-LaTeX Warning: Reference `n:1' on page 13 undefined on input line 8.
+LaTeX Warning: Reference `n:1' on page 14 undefined on input line 8.
 
-[13
-
-
+[14
 
 
-] [14] [15] [16] [17]) [18]
+
+
+] [15] [16] [17] [18]) [19]
 \openout2 = `ch03-metric-space-continuity.aux'.
 
  (/Users/patrickmullen/Documents/mathNotes/Math590/ch03-metric-space-continuity.tex
 Chapter 3.
-[19
+[20
 
 
 
 
-] [20] [21]) [22]
+] [21] [22]) [23]
 \openout2 = `ch04-norm-eq.aux'.
 
  (/Users/patrickmullen/Documents/mathNotes/Math590/ch04-norm-eq.tex
 Chapter 4.
 
-LaTeX Warning: Hyper reference `norm' on page 23 undefined on input line 4.
+LaTeX Warning: Hyper reference `norm' on page 24 undefined on input line 4.
 
-[23
-
-
+[24
 
 
-] [24]) [25]
+
+
+] [25]) [26]
 \openout2 = `ch05-compactness.aux'.
 
  (/Users/patrickmullen/Documents/mathNotes/Math590/ch05-compactness.tex
 Chapter 5.
-[26
+[27
 
 
 
 
-] [27] [28] [29] [30] [31]) [32] (/Users/patrickmullen/Documents/mathNotes/Math590/topology_class-note.aux (/Users/patrickmullen/Documents/mathNotes/Math590/ch01-intro.aux) (/Users/patrickmullen/Documents/mathNotes/Math590/ch02-metric-space.aux) (/Users/patrickmullen/Documents/mathNotes/Math590/ch03-metric-space-continuity.aux) (/Users/patrickmullen/Documents/mathNotes/Math590/ch04-norm-eq.aux) (/Users/patrickmullen/Documents/mathNotes/Math590/ch05-compactness.aux))
+] [28] [29] [30] [31] [32]) [33] (/Users/patrickmullen/Documents/mathNotes/Math590/topology_class-note.aux (/Users/patrickmullen/Documents/mathNotes/Math590/ch01-intro.aux) (/Users/patrickmullen/Documents/mathNotes/Math590/ch02-metric-space.aux) (/Users/patrickmullen/Documents/mathNotes/Math590/ch03-metric-space-continuity.aux) (/Users/patrickmullen/Documents/mathNotes/Math590/ch04-norm-eq.aux) (/Users/patrickmullen/Documents/mathNotes/Math590/ch05-compactness.aux))
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -987,18 +987,18 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 42063 strings out of 478994
- 983126 string characters out of 5858185
- 1471098 words of memory out of 5000000
- 58562 multiletter control sequences out of 15000+600000
+ 42079 strings out of 478994
+ 983352 string characters out of 5858185
+ 1471109 words of memory out of 5000000
+ 58568 multiletter control sequences out of 15000+600000
  422827 words of font info for 96 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  117i,15n,119p,883b,1791s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on /Users/patrickmullen/Documents/mathNotes/Math590/topology_class-note.pdf (32 pages, 464266 bytes).
+Output written on /Users/patrickmullen/Documents/mathNotes/Math590/topology_class-note.pdf (33 pages, 467738 bytes).
 PDF statistics:
- 802 PDF objects out of 1000 (max. 8388607)
- 643 compressed objects within 7 object streams
- 250 named destinations out of 1000 (max. 500000)
- 599 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 823 PDF objects out of 1000 (max. 8388607)
+ 662 compressed objects within 7 object streams
+ 260 named destinations out of 1000 (max. 500000)
+ 607 words of extra memory for PDF output out of 10000 (max. 10000000)
 
