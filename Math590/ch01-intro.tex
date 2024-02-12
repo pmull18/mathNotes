@@ -515,6 +515,14 @@ TODO: Complete example}
 
 \begin{myproof}
 	\begin{enumerate}
-		\item Assume $f$ is continuous. Let $x_n\to x\in X$. Then, we want to show that $f(x_n)\to f(x)$. 
+		\item Assume $f$ is continuous. Let $x_n\to x\in X$. Then, we want to show that $f(x_n)\to f(x)$. Let $N\subset Y$ be a neighborhood of $f(x)$. Then, since $f$ is continuous, $f^{-1}(N)$ is a neighborhood of $x$ ($\exists f(x)\in U\subset N, f^{-1}(U)$ is open and a subset of $f^{-1}(N)$). Since $x_n\to x, \exists n_0$ such that $\forall n > n_0, x_n\in f^{-1}(N)$. Then $f(x_n)\in N$.
+		\item Let $X$ be metrizable, and assume $x_n\to x$ implies $f(x_n)\to f(x)$. Let $d$ be a metric on $X$ inducing the topology. Let $x\in X$ and $N\subset Y$ be a neighborhood of $f(x)$. Suppose for contradiction that $\forall\epsilon>0, f(B(x,\epsilon))\not\subset N$. In particular, $\forall n\geq 1, \exists x_n\in B(x,\frac{1}{n})$ such that $f(x_n)\not\in N$. Now apply our supposition ot $\epsilon=\frac{1}{n}$. Then we can check that $f(x_n)\to f(x)$ and $x_n\to x$ contradicts the statement that $\exists n\geq 1, \exists x_n\in B(x,\frac{1}{n})$ such that $f(x_n)\not\in N$.
 	\end{enumerate}
 \end{myproof}
+
+\dfn{}{
+	Let $X,Y$ be a topological space. A homeomorphism from $X$ to $Y$ is a bijection $f:X\to Y$ such that $U\subset X$ is open if and only if $f(U)\subset Y$.
+	\\
+	$X$ and $Y$ are homeomorphic if $\exists$ a homeomorphism.
+}
+
