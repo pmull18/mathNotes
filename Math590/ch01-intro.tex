@@ -520,9 +520,81 @@ TODO: Complete example}
 	\end{enumerate}
 \end{myproof}
 
-\dfn{}{
+\dfn{Homeomorphism}{
 	Let $X,Y$ be a topological space. A homeomorphism from $X$ to $Y$ is a bijection $f:X\to Y$ such that $U\subset X$ is open if and only if $f(U)\subset Y$.
 	\\
 	$X$ and $Y$ are homeomorphic if $\exists$ a homeomorphism.
 }
+
+\cor{(of Theorem 1.6.3)}{Let $X,Y$ be topological spaces. Then $f:X\to Y$ is a homeomorphism if and only if $f$ is a bijection such that $x_n\to x$ if and only if $f(x_n)\to f(x)$.}
+
+\dfn{Boundary Metric of $d$}{Let $(X, d)$ be a metric space. Then $\bard(x,y) = \min(d(x,y), 1)\leq 1$ is a metric that defines the same topology.}
+
+\begin{myproof}
+	Symmetry and positive definitneness are trivial.
+
+	To prove the triangle inequality:
+
+	Let $x,y,z\in X$. Case 1: assume $d(x,y)\geq 1$ of $d(y,z)\geq 1$. Then $\bard(x,y)+\bard(y,z)\geq 1\leq \bard(x,z)$.
+
+	Case 2: $d(x,y) = \bard(x,y)$ and $d(y,z) = \bard(y,z)$. Then
+	$$\bard(x,y) + \bard(y,z) = d(x,y) + d(y,z)\geq d(x,z)\geq \bard (x,z)$$
+	Therefore, $\bard$ satisfies the triangle inequality.
+\end{myproof}
+
+\dfn{Diameter}{
+	Let $(X,d)$ be a metric space, and $A\subset X$. Then we define diameter as
+	$$\text{diam}_d(A)=\sup\{d(x,y)|x,y\in A\}$$
+}
+
+\ex{}{$\text{diam}_{\mathbb{R}}((0,1)\cup\{2\}) = 2$}
+
+\thm{}{
+	Let $((X_\alpha,d_\alpha))_{\alpha\in I}$ be a family of metric spaces. Suppose $\exists c>0$ such that $\forall\alpha\in I, \text{diam}_{d_\alpha}X_\alpha\leq c$. Then
+	$$d((x_\alpha)_{\alpha\in I}, (y_\alpha)_{\alpha\in I}) = \sup\{d_\alpha(x_\alpha,y_\alpha)|\alpha\in I\}$$
+	is well defined and is a metric (where $\displaystyle((x_\alpha)_{\alpha\in I},(y_\alpha)_{\alpha\in I})\in\prod_{\alpha\in I}X_\alpha$). Moreover, the metric topology is finer than the product topology. We have equality if and only if $\forall\epsilon > 0, I_\epsilon=\{\alpha\in I|\text{diam}X_\alpha\geq \epsilon\}$ is finite.
+}
+
+\begin{myproof}
+	\begin{enumerate}
+		\item First, we must prove that $d$ is a metric. Proving that $d$ is symmetric and positive definite is trivial, so we must demonstrate that $d$ satisfies the triangle inequality.
+		
+		Let $(x_\alpha)_{\alpha\in I}, (y_\alpha)_{\alpha\in I}, (z_\alpha)_{\alpha\in I}$ be sequences such that $x_\alpha, y_\alpha, z_\alpha\in X_\alpha, \forall\alpha\in I$. Then we want to show that
+		$$d((x_\alpha)_{\alpha\in I}, (z_\alpha)_{\alpha\in I})  + d((z_\alpha)_{\alpha\in I}, (y_\alpha)_{\alpha\in I}) \leq d((x_\alpha)_{\alpha\in I}, (y_\alpha)_{\alpha\in I})$$
+		For convenience, let $x = (x_\alpha)_{\alpha\in I}, y = (y_\alpha)_{\alpha\in I}$, and $z = (z_\alpha)_{\alpha\in I}$. We have that $\forall \alpha\in I$, 
+		$$d(x,z) + d(z,y)\geq d_\alpha(x_\alpha, z_\alpha) + d_\alpha(z_\alpha, y_\alpha)\geq d_\alpha(x_\alpha, y_\alpha)$$
+		
+		So $d(x,z) + d(z,y)$ is an upper bound of $\{d_\alpha(x_\alpha,y_\alpha|\alpha\in I)\}$. Then $d(x,y)$ is the least upper bound of this set, so
+		$$d(x,y)\leq d(x,z) + d(z,y)$$
+		Therefore $d$ is a metric and is well defined.
+
+		\item Next, to demonstrate the ``moreover..'' statement, we must demonstrate that the metric topology, $\mcT$, is finer than the product topology, $\mcT'$. That is, we must show that $\mcT'\subset\mcT$.
+		
+		We have that a basis for $\mcT$ is the set $\mcB = \{\text{open balls}\}$, and a basis for $\mcT'$ is $\mcB' = \{\prod_{\alpha\in I}B(x_\alpha, r_\alpha)| r_\alpha = \infty\text{ for all but finitely many }\alpha\}$. Let $B' = \prod_{\alpha\in I}B(x_\alpha, r_\alpha)\in\mcB'$. Let $(y_\alpha)_{\alpha\in I}\in \mcB'$. Set $\epsilon = \inf\{r_\alpha - d_\alpha(x_\alpha, y_\alpha)\}$. Note that this is necessarily greater than 0, and equal to $\infty$ for ``most'' $\alpha$'s. Then 
+		$$B((y_\alpha)_{\alpha\in I}) = \prod_{\alpha\in I}B(y_\alpha, \epsilon)\subset B(x_\alpha, r_\alpha)\subset B'$$
+		So $B'$ is a neighborhood of $(y_\alpha)_{\alpha\in I}$. Therefore $B'\in \mcT$, so $B'\in\mcT'$. Hence, the metric topology $\mcT$ is finer than $\mcT'$.
+
+		\item Suppose $I_\epsilon = \{\alpha\in I|\text{diam}X_\alpha\geq\epsilon\}$ is finite $\forall\epsilon > 0$. We want to show that $\mcT\subset\mcT'$. Let $x = (x_\alpha)_{\alpha\in I}\in X$ and $r > 0$. Then, let $y\in B(x,r)$. Set $\epsilon = r - d(x,y)$. Then $B(y,\epsilon)\subset B(x,r)$. Then we want to find $N$, a $\mcT'$-neighborhood of $y$ contained in $B(y,\epsilon)$. So, $\forall\alpha\in I_{\epsilon/2}$, set $\epsilon_\alpha = \frac{\epsilon}{2}$. Then, $\forall \alpha\in I\setminus I_{\epsilon / 2}$, set $\epsilon_\alpha = \infty$. Then $\prod_{\alpha\in I}B(y_\alpha,\epsilon)\subset B(y,\epsilon)$, and $\prod_{\alpha\in I}B(y_\alpha,\epsilon)$ is a $\mcT'$-neighborhood $y$. Indeed, if $(z_\alpha)_{\alpha\in I}\in\prod_{\alpha\in I}B(y_\alpha,\epsilon_\alpha)$. Then $\forall\alpha\in I$, if $\alpha\in I_{\epsilon}$, then $d_{\alpha}(y_\alpha,z_\alpha) \leq \epsilon/2$. If $\alpha\in I \setminus I_\epsilon, d_{\alpha}(y_\alpha,z_\alpha)\leq \epsilon/2$ as $\text{diam}X_\alpha\leq \epsilon/2$.
+		
+		\item TODO: finish proof later
+	\end{enumerate}
+\end{myproof}
+
+\thm{}{
+	Let $(X,d)$ be a metric space. Then
+	$$x_n\to x\text{ in the metric topology} \iff d(x_n, x)\to 0 \text{ in the standard topology of }\mathbb{R}$$
+}
+
+\ex{}{
+	In $\mathbb{R}^{\mathbb{Z}\geq 0} = \{f:\mathbb{Z}_{\geq 1}\to\mathbb{R}\} = \{(x_n)_{n\geq 1}\text{ sequence in }\mathbb{R}\}$. Then $$d((x_n)_{n\geq 1}, (y_n)_{n\geq 1}) = \sup\{\min(|x_n - y_n|, 1)|n\geq 1\}$$ is a metric. It does not induce the product topology, but rather the \textbf{uniform topology}.
+
+	This works for $\mathbb{R}^I$, where $I$ is any set. For instance, $\mathbb{R}^{\mathbb{R}} = \{f:\mathbb{R}\to\mathbb{R}\}$. Then 
+	$$d(f,g) = \sup\{\min(|f(x)-g(x)|, 1)|x\in\mathbb{R}\}$$
+
+	However, $d'((x_n)_{n\geq 1}, (y_n)_{n\geq 1}) = \sup\{\min(|x_n-y_n|, \frac{1}{n})|n\geq 1\}$ induces the product topology.
+}
+
+\begin{note}
+	In the space of functions from $\mathbb{R}\to\mathbb{R}$, the ball of radius $\epsilon$ centered at a function $f$, $B(f,\epsilon)$, is the set of functions whose graph is contained in the ``$\epsilon$-tubular neighborhood'' of $f$.
+\end{note}
 
