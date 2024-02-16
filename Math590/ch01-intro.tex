@@ -632,4 +632,24 @@ TODO: Complete example}
 		\item \underline{\textbf{Reflexivity:}} $x\sim x$
 		\item \underline{\textbf{Transitivity:}} $(x\sim y\text{ and } y\sim z)\implies x\sim z$
 	\end{enumerate}
+	If $\sim$ is an equivalence relation, the \textbf{equivalence class} of $x\in X$ is $\barx = \{y\in X| y\sim x\}$.
+
+	The \textbf{quotient set} is $X/\sim = \{\barx|x\in X\}\subset\mcP(X)$ the set of equivalence classes.
+
+	The \textbf{quotient map} $f:X\to X/\sim$ defined by $x\mapsto\barx$ is surjective.
 }
+
+\ex{}{
+	Let $X,Y$ be sets, and $f:X\to Y$ be a surjective map. Let $x\sim x'$ if and only if $f(x) = f(x')$. Then $\sim$ is an equivalence relation. Moreover, $\barf:X/\sim\to Y$ defined by $\barx\mapsto f(x)$ is well-defined and bijective.}
+
+\ex{}{
+	Let $X\subset [0,1]^2\subset\mathbb{R}^2$ have the subspace topology. Then we want to "identify" $(0,y)$ with $(1,y)$ and $(x,0)$ with $(x,1)$. Set $(x,y)\sim (x', y')$ if and only if
+	$$\begin{cases}
+		x = x' \text{ and } y = y' \\ 
+		x = x' \text{ and } \begin{cases}y=0 \text{ and } y' = 1 \\  y=1 \text{ and } y' = 0\end{cases} \\ 
+		y = y' \text{ and } \begin{cases}x=0 \text{ and } x' = 1 \\ x=1 \text{ and } x' = 0
+		\end{cases}
+	\end{cases}$$
+	Check that it is an equivalence relation as an exercise.
+	}
+
