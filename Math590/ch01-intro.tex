@@ -600,7 +600,36 @@ TODO: Complete example}
 
 \section{The Quotient Topology}
 \dfn{Inclusion Map}{
-	Let $X$ be a topological space, and $Y\subset X$. We call $i:Y\to X$ defined by the rule $y\mapsto y$. Then the subspace topology on $Y = \{U\cap Y| U\subset X\}$ where $U\cap Y = i^{-1}(U)$. So the subspace topology $\{i^{-1}(U)| U\subset X \text{ is open}\}$. This is the coarsest topology that makes $i$ continuous.
+	Let $X$ be a topological space, and $Y\subset X$. We call $i:Y\to X$ defined by the rule $y\mapsto y$. Then the subspace topology on $Y = \{U\cap Y| U\subset X\}$ where $U\cap Y = i^{-1}(U)$. So the subspace topology is $\{i^{-1}(U)| U\subset X \text{ is open}\}$. This is the coarsest topology that makes $i$ continuous.
 }
 
-\dfn{}{}
+\dfn{}{
+	Let $X$ be a topological space, $Y$ a set, and $f:X\to Y$ a map. Then $\mcT = \{U\cap Y| f^{-1}(U)\subset X\text{ is open}\}$ is a topology called the \textbf{Quotient Topology}. It is the finest topology that makes $f$ continuous.
+}
+
+\begin{myproof}
+	Let $X$ be a topological space and $\mcT = \{U\cap Y| f^{-1}(U)\subset X\text{ is open}\}$. Then we want to demonstrate that $\mcT$ is indeed a topology.
+	\begin{enumerate}
+		\item $f^{-1}(U) = \emptyset$, which is open, so $\emptyset\in\mcT$. Then $f^{-1}(Y) = X$, which is open. Therefore, $Y\in\mcT$.
+		\item Let $(U_\alpha)_{\alpha\in I}$ be a family of sets in $\mcT$. Then 
+		$$f^{-1}(\bigcup_{\alpha\in I}U_\alpha) = \bigcup_{\alpha\in I}f^{-1}(U_\alpha)$$
+		By definition of $\mcT$, $f^{-1}(U_\alpha)$ is open in $X$ for all $\alpha\in I$. Therefore, it's union is open since openness is stable under union. So $f^{-1}(\bigcup_{\alpha\in I}U_\alpha)$ is open in $X$. Then, by the definition of $\mcT$, we have $\bigcup_{\alpha\in I}U_\alpha\in\mcT$. Thus, $\mcT$ is stable under union.
+		\item Let $U,V\in\mcT$. We want to demonstrate that $U\cap V\in\mcT$. We have that 
+		$$f^{-1}(U\cap V) = f^{-1}(U)\cap f^{-1}(V)$$
+		Note that $f^{-1}(U)$ and $f^{-1}(V)$ are both open in $X$, so their intersection is also open in $X$. Therefore, by definition of $\mcT$, we have $U\cap V\in \mcT$. Thus, $\mcT$ is stable under finite intersection.
+	\end{enumerate}
+	$\mcT$ is therefore a topology.
+\end{myproof}
+
+\ex{}{Let $f:\mathbb{R}^2\to\mathbb{R}$ be defined by $(x,y)\mapsto x$. Then the quotient of the standard topology on $\mathbb{R}^2$ under $f$ is the standard topology on $\mathbb{R}$. The proof is left as an exercise.}
+
+\dfn{Equivalence Relation}{
+	Let $X$ be a set. A \textbf{relation} is a map $\sim:X\times X\to \{\text{True, False}\}$, where $\text{True}$ indicates that $x$ and $y$ are in relation, and $\text{False}$ indicates that $x$ and $y$ are not in relation.
+
+	The map $\sim$ is called an $\textbf{equivalence relation}$ if it satisfies the following conditions $\forall x,y,z\in X$:
+	\begin{enumerate}
+		\item \underline{\textbf{Symmetry:}} $x \sim y\iff y\sim x$
+		\item \underline{\textbf{Reflexivity:}} $x\sim x$
+		\item \underline{\textbf{Transitivity:}} $(x\sim y\text{ and } y\sim z)\implies x\sim z$
+	\end{enumerate}
+}
