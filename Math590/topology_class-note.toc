@@ -5,6 +5,7 @@
 \contentsline {section}{\numberline {1.4}Bases of Topologies}{10}{section.1.4}%
 \contentsline {section}{\numberline {1.5}The Product Topology}{13}{section.1.5}%
 \contentsline {section}{\numberline {1.6}Metric Spaces}{15}{section.1.6}%
+\contentsline {section}{\numberline {1.7}The Quotient Topology}{18}{section.1.7}%
 \contentsline {chapter}{\numberline {2}Metric Space}{19}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Definition}{19}{section.2.1}%
 \contentsline {section}{\numberline {2.2}Open and Closed Ball and Set}{19}{section.2.2}%
