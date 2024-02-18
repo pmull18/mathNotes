@@ -653,3 +653,104 @@ TODO: Complete example}
 	Check that it is an equivalence relation as an exercise.
 	}
 
+\section{Closed Sets and Limit Points}
+\dfn{Closed Set}{Let $X$ be a topological space. A subset $C\subset X$ is \textbf{closed} if its complement, $X\setminus C$, is open.}
+
+\ex{}{In $\mathbb{R}$, $\{x\}$ is closed (since $\mathbb{R}\setminus C$ is open). Also, $[a,b]$ is closed, as $(-\infty, a)\cup(b,\infty)$ is open. The sets $(a,b)$ and $[a,b)$ are not closed.
+}
+
+\thm{Properties of Closed Sets}{
+	Let $X$ be a topological space. Then
+	\begin{enumerate}
+		\item $\emptyset, X$ are closed.
+		\item Closed is stable under intersection.
+		\item Closed is stable under finite unions.
+	\end{enumerate}
+}
+
+\begin{myproof}
+	\begin{enumerate}
+		\item TODO: Later
+	\end{enumerate}
+\end{myproof}
+
+\thm{}{Let $X,Y$ be a topological space, and let $f:X\to Y$ be a mapping. Then $f$ is continuous if and only if $\forall C\subset Y, f^{-1}(C)$ is closed in $X$}
+
+\begin{myproof}
+	TODO: finish later
+\end{myproof}
+
+\ex{}{In $\mathbb{R}^d$, let $f:\mathbb{R}^d\to\mathbb{R}$ be a map. Let $x\in\mathbb{R}^d$, and define $f$ by the rule $y\mapsto d(x,y)$ is continuous. The proof is left as an exercise}
+
+\ex{}{$\{(x,y)\in\mathbb{R}^2| x+y=1\}\subset \mathbb{R}^2$ is closed.}
+
+\thm{}{Let $X$ be a topological space and $C\subset X$. Then
+	\begin{enumerate}
+		\item if $C$ is closed, then $\forall(x_n)_{n\geq 0}\subset C$ such that $x_n\to x, x\in C$. In this case, we say $C$ is "closed under sequential limits.
+		\item Suppose $X$ is metrizable. If $C$ is stable under limit then it is closed.
+	\end{enumerate}
+}
+
+\begin{myproof}
+	\begin{enumerate}
+		\item Let $C\subset X$ be closed, and let $(x_n)_{n\geq 0}\subset C$ such that $x_n\to x$ for some $x\in X$. Suppose for contradiction that $x\in X\setminus C$. Since $C$ is closed $X\setminus C$ is open, so it is a neighborhood of $x$. Since $x_n\to x, \exists n_0$ such that $\forall n\geq n_0, x_n\in X\setminus C$. However, this contradicts the fact that $x_n\in C, \forall n\geq 0$. Therefore, $x\in C$, so $C$ is closed under sequential limits.
+		\item Let $d$ be a metric inducing a topology on $X$. To attempt a proof by contrapositive, suppose $C$ is not closed, and therefore $X\setminus C$ is not open. Therefore, $\exists x\in X\setminus C$ such that $X\setminus C$ is not a neighborhood of $x$. Then, $\forall \epsilon > 0, B(x,\epsilon)\not\subset X\setminus C$. Then, $\forall n\geq 1, \exists x_n \in B(x,\frac{1}{n})$ such that $x_n X\setminus C$. Therefore, $x_n\in C$. Then $d(x_n,x)<\frac{1}{n}$, so $x_n\to x\not\in C$. Therefore, $C$ is not stable under sequential limits.
+	\end{enumerate}
+\end{myproof}
+
+\dfn{Closure, Interior, Boundary, and Limit Point}{
+	Let $X$ be a topological space and $A\subset X$.
+	\begin{enumerate}
+		\item The \underline{\textbf{closure}} of $A$, denoted $\barA$, is defined as the intersection of all closed sets containing $A$. This is equivalent to the smallest closed set containing $A$, or the set $\{x\in X|\text{any neighborhood meets } A\}$.
+		\item The \underline{\textbf{interior}} of $A$, denoted $\mathring{A}$ or $\text{Int}(A)$, is defined as the union of all open sets contained in $A$. This is equivalent to the biggest set contained in $A$, or the set $\{x\in A| x\text{ has a neighborhood contained in } A\}$.
+		\item The \underline{\textbf{boundary}} of $A$, denoted $\partial A$, is defined as $\barA\setminus\mathring{A} = \barA\cap(X\setminus \mathring{A})$. Note that $\partial A$ is closed, and that $\mathring{A}\sqcup\partial A$.
+		\item Let $x\in X$. Then $x$ is \underline{\textbf{accumulation}} or \underline{\textbf{limit point}} if all $x$ meets $A\setminus\{x\}$.
+	\end{enumerate}
+}
+
+Proof of the equivalence of the definition of interior with the listed set
+\begin{myproof}
+	Let $U = \{x\in A| \exists N\subset A\text{ a neighborhood of }x\}$. We want to show that $U=\mathring{A}$.
+
+	$(\subset)$ To demonstrate that $U\subset\mathring{A}$, we just need to show that $U$ is open. Let $x\in U$. Then $\exists N$ an open neighborhood of $x$ such that $N\subset A$. Then $\exists V\subset X$ open such that $x\in V\subset N\subset A$. Then $V\subset U$. Indeed $\forall y\in V, y\in V\subset A$, so $y\in U$, hence $U$ is a neighborhood of $x$, so $U$ is open. Therefore, $U\subset\mathring{A}$.
+
+	$(\supset)$ Let $x\in\mathring{A}$. Then $x\in\mathring{A}\subset A$. Note that $\mathring{A}$ is a neighborhood of $x$, so $x\in U$. Therefore, $\mathring{A}\subset U$ and $\mathring{A} = U$.
+\end{myproof}
+
+
+\thm{}{
+	Let $X$ be a topological space, and $A\subset X$. Then $\overline{X\setminus A} = X\setminus\mathring{A}$ and $\text{Int}(X\setminus A) = X\setminus\barA$.
+}
+
+\begin{myproof}
+	Let $\mcT = \{C\subset X| C \text{ is closed and contains } X\setminus A\}$. Then $C\in\mcT$ if and only if $X\setminus C$ open and contained in $A$. Let $\mcU = \{U\subset X| U\text{ is open abd contained in } A\}$. Then 
+	$$\overline{X\setminus A} = \bigcap_{C\in\mcT}C = \bigcap_{U\in\mcU}X\setminus U = X\setminus(\bigcup_{U\in\mcU}U) = X\setminus \text{Int}(A)$$
+\end{myproof}
+
+\thm{}{
+	Let $X$ be a topological space and $A\subset X$.Then
+	\begin{enumerate}
+		\item $\barA\supset\{x\in X| \exists (x_n)_{n\geq 0}\subset A, \text{ such that } x_n\to x\}$
+		\item Suppose $X$ is metrizable, then $\bar{A} =  \{x\in X| \exists (x_n)_{n\geq 0}\subset A, \text{ such that } x_n\to x\}$
+	\end{enumerate}
+}
+
+\ex{}{
+	Let $X$ be a topological space and $Y\subset X$ with subspace topology. Then 
+	$$\{\text{closed subsets of $Y$}\} = \{C\cap Y| C\subset X\text{ closed}\}$$
+	Indeed, if $C\subset X$ closed, then $Y\setminus(C\cap Y) = (X\setminus C)\cap Y$ open in $Y$. If $C'\subset Y$ is closed, then $Y\setminus C'\subset Y$ is open. Then, $\exists U\subset X$ such that $Y\setminus C' = U\cap Y$. Then
+	$$C' = Y\setminus (U\cap Y) = (X\setminus U)\cap Y$$
+	Note that $X\setminus U$ is closed in $X$.
+}
+
+\thm{}{
+	Let $A\subset Y$ be a subset. Then $\overline{A}^Y$ is the closure of $A$ in $Y$, and $\overline{A}^Y = \overline{A}^X\cap Y$.
+
+	$\barA^X\cap Y$ is closed and contains $A$, so $\barA^X\cap Y\supset \barA^Y$. Conversely, $\barA^Y = C\cap Y$ for some $C\subset X$ closed. Then $A\subset C$, so $\barA^X\subset C$, and $\barA^X\cap Y\subset C\cap Y$. So $\barA^Y = \barA^X\cap Y$.
+}
+
+\ex{}{
+	Let $X_1,X_2$ be two topological spaces. Let $C_1\subset X_1$ and $C_2\subset X_2$ be closed. Then $C_1\times C_2$ is closed in $X_1\times X_2$. Indeed,
+	$$(X_1 \times X_2)\setminus(C_1\times C_2) = (X_1\times(X_2\setminus C_2))\cup((X_1\setminus C_1)\times C_2)$$
+	Note that $X_1\setminus C_1,X_2\setminus C_2$ are open since $C_1,C_2$ are closed. Then, $X_1\times(X_2\setminus C_2)$ and $(X_1\setminus C_1)\times C_2$ are both open, so their union is open.
+}
