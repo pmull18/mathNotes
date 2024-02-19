@@ -749,8 +749,77 @@ Proof of the equivalence of the definition of interior with the listed set
 	$\barA^X\cap Y$ is closed and contains $A$, so $\barA^X\cap Y\supset \barA^Y$. Conversely, $\barA^Y = C\cap Y$ for some $C\subset X$ closed. Then $A\subset C$, so $\barA^X\subset C$, and $\barA^X\cap Y\subset C\cap Y$. So $\barA^Y = \barA^X\cap Y$.
 }
 
-\ex{}{
+\cor{}{
 	Let $X_1,X_2$ be two topological spaces. Let $C_1\subset X_1$ and $C_2\subset X_2$ be closed. Then $C_1\times C_2$ is closed in $X_1\times X_2$. Indeed,
 	$$(X_1 \times X_2)\setminus(C_1\times C_2) = (X_1\times(X_2\setminus C_2))\cup((X_1\setminus C_1)\times C_2)$$
 	Note that $X_1\setminus C_1,X_2\setminus C_2$ are open since $C_1,C_2$ are closed. Then, $X_1\times(X_2\setminus C_2)$ and $(X_1\setminus C_1)\times C_2$ are both open, so their union is open.
 }
+
+\begin{myproof}
+	Indeed, $$(X_1 \times X_2)\setminus(C_1\times C_2) = (X_1\times(X_2\setminus C_2))\cup((X_1\setminus C_1)\times C_2)$$
+	Note that $X_1\setminus C_1,X_2\setminus C_2$ are open since $C_1,C_2$ are closed. Then, $X_1\times(X_2\setminus C_2)$ and $(X_1\setminus C_1)\times C_2$ are both open, so their union is open.
+\end{myproof}
+
+\begin{note}
+	Let $A_1\subset X_1$ and $A_2\subset X_2$. Then $\overline{A_1\times A_2} = \barA_1\times\barA_2$, which is closed and contains $A_1\times A_2$.
+	\begin{myproof}
+		We wat to show that $\barA_1\times\barA_2\subset \overline{A_1\times A_2}$.
+
+		Let $(x_1,x_2)\in\barA_1\times\barA_2$. Let $N$ be a neighborhood of $(x_1, x_2)$ in $X_1\times X_2$. Then, $\exists U_1\subset X_1$ neighborhood of $x_1$ and $\exists U_2\subset X_2$ neighborhood of $x_2$ such that $U_1\times U_2\subset N$.
+
+		Since, for $i\in \{1,2\},\exists y_i\in U_i\cap A_i$,we have that $(y_1, y_2)\in (U_1\times U_2)\cap(A_1\times A_2)\subset N\cap (A_1\times A_2)$. Therefore, $(x_1,x_2)\in \overline{A_1\times A_2}$
+	\end{myproof}
+\end{note}
+
+\begin{note}
+	For $A,B$ two sets,
+	$$\overline{A\cup B} = \barA\cup\barB$$
+	\begin{myproof}
+		Let $A,B$ be two sets.
+		$(\subset)$ Since closed-ness is stable under finite union, we have that $\barA\subset\barB$ is closed and contains $A\cup B$. Therefore, since the closeure of a set is the smallest closed set containing that set, we have that $$\overline{A\cup B}\subset \barA\cup\barB$$
+		$(\supset)$ Clearly $A\subset A\cup B$, so $\barA\subset\overline{A\cup B}$. Similarly, $B\subset A\cup B$, so $\barB\subset\overline{A\cup B}$. Therefore, 
+		$$\overline{A\cup B}\supset \barA\cup\barB$$
+		Thus, $$\overline{A\cup B} = \barA\cup\barB$$
+	\end{myproof}
+\end{note}
+
+\dfn{Hausdorff Space}{
+	Let $X$ be a topological space. Then $X$ is \underline{\textbf{Hausdorff}} if $\forall x\neq y\in X, \exists U$ a neighborhood of $x$ and $\exists V$ a neighborhood of $y$ such that $U\cap V=\emptyset$.
+}
+Most topological spaces we will look at will be Hausdorff with the exception of some finite ones.
+
+\ex{}{
+	\begin{enumerate}
+		\item Metric spaces $(X,d)$ are Hausdorff. For $x\neq y\in X$, we only have to look at $B(x,\frac{d(x,y)}{2})\cap B(y,\frac{d(x,y)}{2})=\emptyset$ to see this.
+		\item $X = \{0,1,2\}, \mcT\{\emptyset, X, \{0\}, \{1,2\}\}$ is \textbf{not} Hausdorff.
+		\item If $X$ is Hausdorff and $Y\subset X$ is a subspace, then $Y$ is Hausdorff. The proof is left as an exercise.
+		\item Let $X_1, X_2$ be two Hausdorff spaces. Then $X_1\times X_2$ is Hausdorff. Let $(x_1,x_2)\neq (y_1,y_2)\in X_1\times X_2$. If $x_1\neq y_1$, then $\exists U_1, V_1$ respective neighborhoods of $x,y$ such that $U_1\times V_1= \emptyset$. Then $(U_1\times X_2)\cap (V_1\times X_2) = \emptyset$. The case where $x_1 = y_1$ but $x_2\neq y_2$ is identical.
+	\end{enumerate}
+}
+
+\thm{}{Let $X$ be a Hausdorff topological space. If $x_n\to x$ and $x_n\to y$ as $n\to\infty$, then $x=y$}
+\begin{myproof}
+	Assume for contradiction that $x\neq y$. Then $\exists U, V$ respective neighborhoods of $x,y$ such that $U\cap V\neq 0$. Since $x_n\to x, \exists n_0$ such that $\forall n > n_0, x_n\in U$, and since $x_n\to y, \exists k_0$ such that $\forall n > k_0, x_n\in V$. Then, $\forall n > \max(n_0, k_0), x_n\in U\cap V$, which is a contradiction.
+\end{myproof}
+
+\thm{}{Let $X$ be a Hausdorff topological space and let $A = \{x_1,...,x_n\}\subset X$ be a finite subset. Then $A$ is closed.}
+
+\begin{myproof}
+	TODO: transcribe proof later
+\end{myproof}
+
+\begin{note}
+	Consider the set of natural numbers $\mathbb{N} = \{0,1,2,...\}$ and take $\mcT = \{U\subset \mathbb{N}|\mathbb{N}\setminus U\text{ is finite}\}$. Then every finite set is closed, but $(\mathbb{N},\mcT)$ is not Hausdorff. The proof is left as an exercise.
+\end{note}
+
+\dfn{Continuous at a Point}{
+	Let $X,Y$ be topological spaces, take $x\in X$, and let $f:X\to Y$ be a map. Then $f$ is \underline{\textbf{continuous at $x$}} if $\forall N$ neighborhood of $f(x)$, $f^{-1}(N)$ is a neighborhood of $x$.
+}
+
+\thm{}{
+	Let $X, Y$ be topological spaces. Then $f:X\to Y$ is continuous if and only if it is continuous at every point
+}
+\begin{myproof}
+	TODO: transcribe and complete proof
+\end{myproof}
+
