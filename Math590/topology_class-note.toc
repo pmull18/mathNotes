@@ -7,23 +7,22 @@
 \contentsline {section}{\numberline {1.6}Metric Spaces}{15}{section.1.6}%
 \contentsline {section}{\numberline {1.7}The Quotient Topology}{18}{section.1.7}%
 \contentsline {section}{\numberline {1.8}Closed Sets and Limit Points}{19}{section.1.8}%
-\contentsline {chapter}{\numberline {2}Metric Space}{24}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Definition}{24}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Open and Closed Ball and Set}{24}{section.2.2}%
-\contentsline {section}{\numberline {2.3}Topological Space}{27}{section.2.3}%
-\contentsline {chapter}{\numberline {3}Continuity in Metric Space}{30}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Limit Point and Closure}{30}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Continuity}{31}{section.3.2}%
-\contentsline {chapter}{\numberline {4}Equivalence of Norms}{34}{chapter.4}%
-\contentsline {subsubsection}{If Part:-}{35}{section*.13}%
-\contentsline {subsubsection}{Only If Part:-}{35}{section*.14}%
-\contentsline {chapter}{\numberline {5}Compactness}{37}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Sequentially Compact}{37}{section.5.1}%
-\contentsline {subsubsection}{A closed interval $\boldsymbol {[a, b]}$ in $\mathbb {R}$ is sequentially compact}{37}{section*.15}%
-\contentsline {subsubsection}{$\boldsymbol {[a_1,b_1]\times [a_2,b_2]\times \cdots \times [a_n,b_n]\subset \mathbb {R}^n}$ is sequentially compact (w.r.t $\boldsymbol {p-}$norm for $\boldsymbol {p=1,2,\infty }$. Later for any norm)}{38}{section*.16}%
-\contentsline {subsubsection}{Every closed subset of a sequentially compact set is sequentially compact}{38}{section*.17}%
-\contentsline {subsubsection}{If K is sequentially compact then K is closed and bounded}{38}{section*.18}%
-\contentsline {section}{\numberline {5.2}Open Cover and Compactness}{38}{section.5.2}%
-\contentsline {subsubsection}{Only If Part:-}{39}{section*.19}%
-\contentsline {subsubsection}{If Part:-}{39}{section*.20}%
+\contentsline {chapter}{\numberline {2}Connectedness}{24}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Paths}{24}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Connectedness}{25}{section.2.2}%
+\contentsline {chapter}{\numberline {3}Continuity in Metric Space}{28}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Limit Point and Closure}{28}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Continuity}{29}{section.3.2}%
+\contentsline {chapter}{\numberline {4}Equivalence of Norms}{32}{chapter.4}%
+\contentsline {subsubsection}{If Part:-}{33}{section*.13}%
+\contentsline {subsubsection}{Only If Part:-}{33}{section*.14}%
+\contentsline {chapter}{\numberline {5}Compactness}{35}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Sequentially Compact}{35}{section.5.1}%
+\contentsline {subsubsection}{A closed interval $\boldsymbol {[a, b]}$ in $\mathbb {R}$ is sequentially compact}{35}{section*.15}%
+\contentsline {subsubsection}{$\boldsymbol {[a_1,b_1]\times [a_2,b_2]\times \cdots \times [a_n,b_n]\subset \mathbb {R}^n}$ is sequentially compact (w.r.t $\boldsymbol {p-}$norm for $\boldsymbol {p=1,2,\infty }$. Later for any norm)}{36}{section*.16}%
+\contentsline {subsubsection}{Every closed subset of a sequentially compact set is sequentially compact}{36}{section*.17}%
+\contentsline {subsubsection}{If K is sequentially compact then K is closed and bounded}{36}{section*.18}%
+\contentsline {section}{\numberline {5.2}Open Cover and Compactness}{36}{section.5.2}%
+\contentsline {subsubsection}{Only If Part:-}{37}{section*.19}%
+\contentsline {subsubsection}{If Part:-}{37}{section*.20}%
 \contentsfinish 
