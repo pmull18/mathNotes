@@ -76,7 +76,7 @@ Then, for the proof of the pasting lemma:
 \end{myproof}
 
 \dfn{Separation}{
-	Let $X$ be a topological space. A \underline{\textbf{underline}} is a pair $(U,V)$ of disjoint non-empty open sets that cover $X$. i.e. it is a pair $(U,X\setminus U)$ where $U$ is a non-empty proper clopen (closed and open) subset.
+	Let $X$ be a topological space. A \underline{\textbf{separation}} is a pair $(U,V)$ of disjoint non-empty open sets that cover $X$. i.e. it is a pair $(U,X\setminus U)$ where $U$ is a non-empty proper clopen (closed and open) subset.
 }
 
 \dfn{Connected}{
@@ -89,11 +89,12 @@ Then, for the proof of the pasting lemma:
 	TODO: insert proof here
 \end{myproof}
 
-\dfn{Interval}{
+\newpage
+
+\dfn[]{Interval}{
 	Let $I\subset\mathbb{R}$. $I$ is an interval if $I = \{a\}, [a,b], (a,b), [a,b), (-\infty, b), (-\infty, \infty), \emptyset,$ etc.
 }
-
-\thm{}{
+\thm[]{}{
 	Let $A\subset\mathbb{R}$. The following are equivalent:
 	\begin{enumerate}
 		\item $A$ is an interval
@@ -103,10 +104,6 @@ Then, for the proof of the pasting lemma:
 	\end{enumerate}
 }
 
-\begin{myproof}
-	TODO: insert proof here
-\end{myproof}
-
 \thm{}{
 	Let $X,Y$ be a topological space and let $f:X\to Y$ be continuous. Then 
 	\begin{enumerate}
@@ -114,6 +111,10 @@ Then, for the proof of the pasting lemma:
 		\item if $X$ is path-connected, then $f(X)$ is path-connected.
 	\end{enumerate}
 }
+
+\begin{myproof}
+	TODO: insert proof here
+\end{myproof}
 
 \begin{myproof}
 	TODO: insert proof here
@@ -129,6 +130,86 @@ Then, for the proof of the pasting lemma:
 
 \ex[]{}{$Y = \{(t,\sin(\frac{1}{t}))|t>0\}\cup\{0\}\times [-1,1]$ is connected, but not path connected.}
 
+\begin{myproof}
+	TODO: Insert proof here (from lecture on 2/12)
+\end{myproof}
+
 \thm{}{
 	Let $X$ be a topological space and $A\subset X$ be connected. Then $\barA$ is connected. In particular, if $A$ is dense in $X$ (i.e. $\barA = X$) then $X$ is connected.
 }
+
+\begin{myproof}
+	TODO: insert proof here
+\end{myproof}
+
+\thm{}{
+	Let $X$ be a topological space and take $x,y\in X$. Suppose $p:[0,1]\to X$ is a path from $x$ to $y$ and $\exists U$ open such that $x\in U$ but $y\not\in U$. Then $\exists t$ such that $p(t)\in \partial U$.
+}
+
+\thm{}{
+	Let $X, Y$ be $\begin{cases}\text{connected} \\ \text{path-connected}\end{cases}$. Then $X\times Y$ is $\begin{cases}\text{connected} \\ \text{path-connected}\end{cases}$.
+}
+
+\begin{myproof}
+	TODO: insert proof here
+\end{myproof}
+
+\thm{}{
+	Let $X$ be a topological space, and let $(A_\alpha)_{\alpha\in I}$ be a collection of (path-)connected subspaces such that $\bigcap_{\alpha\in I}A_\alpha\neq\emptyset$. Then $\bigcup_{\alpha\in I}A_\alpha\neq\emptyset$ is (path-)connected.
+}
+
+\begin{myproof}
+	TODO: insert proof here
+\end{myproof}
+
+\dfn{Connected Elements}{
+	Let $X$ be a topological space. Then $x,y\in X$ are \textbf{connected in $X$} if $\exists A\subset X$ a connected subspace such that $x,y\in A$. Note that this is an equivalence relation. The \textbf{connected component} of $x$ is its equivalence class.
+}
+
+\begin{myproof}
+	TODO: insert proof here
+\end{myproof}
+
+\begin{note}
+	If $\sim$ is an equivalence relation on $X$, then the equivalence classes form a partition of $X$. $X$ is the disjoint union of all equivalence classes. If two equivalence classes intersect, then they are equal.
+\end{note}
+
+\thm{}{
+	\begin{enumerate}
+		\item If $x,y$ are path connected in $X$, then $x,y$ are connected in $X$.
+		\item The path connected component of $x$ is contained in the connected complement of $x$.
+		\item The connected component of $x$ is the union of all connected subspaces containing $x$, or equivalently, the largest connected subspace containing $x$.
+	\end{enumerate}
+}
+
+\dfn[]{}{
+	Let $X$ be a topological space and let $x\in X$. $X$ is \textbf{locally (path) connected at $x$} if $\forall N$ open neighborhood of $x$, $\exists N'\subset N$ which is (path) connected. $X$ is \textbf{locally connected} if it is locally connected at every point.
+}
+
+\begin{note}
+	A topological space being locally connected at $x$ does not mean that there exists a connected open neighborhood. Similarly   connectedness does not imply local connectedness.
+\end{note}
+
+\begin{note}
+	If $X$ is locally connected, then any open $U\subset X$ is locally connected.
+\end{note}
+
+
+\thm{}{Let $X$ be a topological space and $A\subset X$ be a connected subspace. Then $\barA$ is connected.}
+
+\cor[]{}{If $X$ is a topological space, then any connected component is closed.
+
+Note that \textbf{path} connected components are not necessarily closed.}
+
+\begin{myproof}
+	TODO: insert proof here
+\end{myproof}
+
+\thm{Locally Connected}{Let $X$ be a locally (path) connected subspace. Then the (path) connected components are clopen.}
+
+\begin{myproof}
+	TODO: insert proof here
+\end{myproof}
+
+\thm{}{Let $X$ be a locally path connected space. Then $X$ is locally connected, and $\forall x\in X$, the path connected component of $x$ is equal to the connected component of $x$.}
+

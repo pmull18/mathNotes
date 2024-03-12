@@ -1,0 +1,180 @@
+\chapter{Compactness}
+\section{Definition}
+
+\dfn{Cover}{
+	Let $X$ be a topological space and $Y\subset X$ a subspace. A collection $\mcA\subset\mcP(X)$ of subspace of $X$ \textbf{covers} $Y$ if $Y\subset\bigcup_{A\in\alpha}A$. $\mcA$ can be replaced by $(A_\alpha)_{\alpha\in I}$ and $\bigcup_{A\in \mcA}A$ by $\bigcup_{\alpha\in I}A_\alpha$. $\alpha$ is then called a \textbf{cover} of $Y$.
+
+	$\alpha$ is an \textbf{open cover} if every $A\in\mcA$ is open.
+}
+
+\ex{}{TODO: insert illustration here}
+
+\dfn{Compact}{
+	Let $X$ be a topological space. We say $X$ is \textbf{compact} if every open cover $\mcU\subset\mcP(X)$ admits a finite subcover, i.e. $\exists U_1,...,U_n\in\mcU$ such that $X\subset U_1\cup...\cup U_n$.
+}
+
+\ex{}{
+	Any finite space is compact.
+	$\mathbb{R}^k$ is \textbf{not compact}. In fact, any subspace $X\subset\mathbb{R}^k$ is not compact. $\mcU=\{B(x,1):x\in X\}$ is an open cover of $X$ but does not admit a finite subcover. Otherwise, if $X\subset B(x_1,1)\cup...\cup B(x_n,1)$, then $X$ is bounded.
+}
+
+\begin{note}
+	Let $X$ be a topological space and $Y\subset X$ a subspace. Then $Y$ is compact if and only if every open cover of $Y$ in $X$ admits a finite subcover.
+\end{note}
+
+\begin{myproof}
+	TODO: insert proof here
+\end{myproof}
+
+\thm{}{$[0,1]$ is compact.}
+
+\begin{myproof}
+	TODO: insert proof here
+\end{myproof}
+
+\thm{}{Let $X,Y$ be a topological space and $f:X\to Y$ be continuous. If $X$ is compact, then $f(X)$ is compact.}
+
+\cor[]{}{
+	$[a,b]\subset\mathbb{R}$ is compact $\forall a\leq b\in \mathbb{R}$.
+}
+
+\thm{}{Let $X,Y$ be compact spaces. Then $X\times Y$ is compact.}
+
+\cor[]{}{Any parallelepiped $[a_1,b_1]\times...\times[a_k,b_k]\subset \mathbb{R}^k$ is compact.}
+
+\thm{}{
+	Let $X,Y$ be topological spaces with $X$ compact. Let $y\in Y$ and $U\subset X\times Y$ an open set containing $X\times\{y\}$. Then $\exists N$ a neighborhood of $y$ such that $X\times N\subset U$.
+}
+
+\begin{myproof}
+	TODO: insert proofs of the previous statements.
+\end{myproof}
+
+\thm{}{
+	Let $X$ be a compact space and $Y\subset X$ a closed subset. Then $Y$ is compact.
+}
+
+\cor[]{}{
+	Any closed, bounded $A\subset\mathbb{R}^k$ is compact.
+}
+
+\begin{myproof}
+	TODO: insert proofs of the previous statements.
+\end{myproof}
+
+\thm{}{
+	Let $X$ be a Hausdorff space. Then $Y\subset X$ being compact implies that $Y$ is closed.
+}
+
+\cor[]{}{
+	$X\subset\mathbb{R}^k$ is compact if and only if it is closed and bounded.
+}
+
+\thm[]{Extremal Value Theorem}{
+	Let $X$ be a compact space and $f:X\to\mathbb{R}$ be continuous. Then $\exists a,b\in X$ such that $\forall x\in X$
+	$$f(a)\leq f(x)\leq f(b)$$
+	Note that we can just use $\min\{f(y):y\in X\}$ for $f(a)$ and $\max\{f(y):y\in X\}$ for $f(b)$.
+}
+
+\clm[]{}{Let $A\subset\mathbb{R}$ be bounded from above. Then $\sup A\in \barA$ ($\exists (x_n)_{n}\subset A$ such that $x_n\to \sup A$). In particular, if $A$ is closed, then $\sup A\in \barA$.}
+\begin{myproof}
+	By definition, $\sup A$ is the least upper bound of $A$, so $\forall n\geq 1, \sup A - \frac{1}{n}$ is not an upper bound. Then, $\exists x_n\in A$ such that $x_n > \sup A - \frac{1}{n}$. Moreover, $x_n \leq \sup A$. Then $d(x_n,\sup A)\leq\frac{1}{n}$ for all $n\in\mathbb{N}$. Therefore $x_n\to\sup A$.
+\end{myproof}
+
+For the proof of the Extremal Value Theorem, we use the previous claim:
+\begin{myproof}
+	TODO: insert proof of Extremal Value Theorem here.
+\end{myproof}
+
+\nt{
+	Let $X$ be a topological space, and take $\mcA\subset\mcP(X)$ a collection of subsets of $X$. Let $\mcB = \{X\setminus A|A\in\mcA\}$. Note that
+	\begin{enumerate}
+		\item $\mcA$ is made of open sets if and only if $\mcB$ is made of closed sets
+		\item $\mcA = \{X\setminus B|B\in\mcB\}$
+		\item $\mcA$ covers $X$ if and only if $\displaystyle\bigcap_{B\in\mcB} B = \bigcap_{A\in\mcA} X\setminus A = X\setminus \bigcup_{A\in\mcA} A$ is empty.
+	\end{enumerate}
+}
+
+\thm[]{}{Let $X$ be a topological space. Then $X$ is compact if and only if for any $\mcC\subset\mcP(X)$ collection of closed sets such that $\bigcap_{C\in\mcC} C = \emptyset, \exists C_1,...,C_n\in\mcC$ such that $C_1\cap...\cap C_n = \emptyset$. 
+
+$\mcC\subset \mcP(X)$ of closed sets satisfies the \underline{finite intersection property}: $\forall C_1,..., C_n\in\mcC, C_1\cap...\cap C_n = \emptyset$ if and only if we have $\cap_{C\in\mcC}C = \emptyset$.}
+The second aspect of the above theorem is somewhat trivial.
+
+\cor[]{}{
+	Let $X$ be a topological space and $(C_n)_{n\geq 1}$ be a non-increasing ($C_{n+1}\subset C_n$) sequence of $\begin{cases}
+	\text{closed } \\ 
+	\text{compact }
+	\end{cases}$ subspace. Then $\displaystyle \bigcap_{n\geq 1}C_n\neq \emptyset$. If $X$ is Hausdorff, then $\displaystyle\bigcap_{n\geq 1} C$ is closed and compact.
+}
+
+
+\section{Sequential Compactness}
+
+\dfn{Subsequence}{
+	Let $(x_n)_{n\geq 1}$ be a sequence in a set $X$. A subsequence of $(x_n)_{n\geq 1}$ is a sequence of the form $(x_{n_k})_{k\geq 1}$ where $(n_k)_{k\geq 1}$ is an increasing sequence of positive integers (called an \textbf{extraction}).
+}
+
+\ex[]{}{
+	$\displaystyle \bigg(\frac{1}{2^k}\bigg)_{k\geq 1}$ is a subsequence of $\displaystyle\bigg(\frac{1}{n}\bigg)_{n\geq 1}$. Just take $n_k = 2^k$.
+}
+
+\nt{
+	Let $(n_k)_{k\geq 1}$ be an extraction. Then $n_k > n_{k-1}$, so $n_k\geq n_{k-1}+1\geq n_{k-2}+2\geq...\geq n_1+k-1\geq k\geq 1$.
+}
+
+\dfn[]{}{
+	Let $X$ be a topological space. Let $(x_n)_{n\geq 1}\subset X$. An \textbf{accumulation point} of $(x_n)_{n\geq 1}$ is a limit of a converging subsequence of $(x_n)_{n\geq 1}$.
+}
+
+\ex[]{}{
+	The accumulation points of $((-1)^n)_{n\geq 1}$ are $-1$ and $1$.
+
+	TODO: finish this example and warning
+}
+
+\clm[]{}{
+	Let $(X,d)$ be a metric space, and let $(x_n)_{n\geq 1}\subset X$ be a sequence. Then the set of accumulation points is
+	$$\bigcap_{n_0\geq 1}\overline{\{x_n:n\geq n_0\}}$$
+}
+
+\thm[]{}{
+	Let $(X,d)$ be a compact metric space. Then any sequence admits a converging subsequence.
+}
+
+\thm[]{}{
+	Let $(X,d)$ be a metric space. Then $X$ is compact if and only if $X$ is sequentially compact.
+}
+
+\thm[]{Lebesgue Number Lemma}{
+	Let $(X,d)$ be sequentially compact metric space. Let $\mcU\subset\mcP(X)$ be an open cover. Then, $\exists\delta > 0$ such that $\forall x\in X, \exists U\in\mcU$ such that $B(x,\delta)\subset U$
+}
+
+TODO: insert proof of Lebesgue Nummer Lemma
+
+TODO: insert proof of previous theorem, using Lemma
+
+\dfn[]{Uniform Continuity}{
+	Let $(X, d_X)$, $(Y, d_Y)$ be metric spaces. Let $f:X\to Y$ is \textbf{uniformly continuous} if $\forall \epsilon > 0, \exists\delta > 0$ such that $\forall x_0\in X,\forall x\in X, if d_x(x_0, x)<\delta$ then $d_Y(f(x_0), f(x))<\epsilon$.
+
+	Recall continuity means $\forall x_0\in X,\forall\epsilon > 0,\exists\delta > 0$ such that $x\in X$ if $d_X(x,x_0) < \delta$ then $d_Y(f(x),f(x_0))<\epsilon$. In the definition continuity, $\epsilon$ and $\delta$ depend on $x_0$. In the definition of uniform continuity, $\epsilon$ and $\delta$ do not.
+}
+
+\ex[]{}{$f:\mathbb{R}\to\mathbb{R}$ defined by $x\mapsto x$ is uniformly continuous (take $\delta = \epsilon$). $g:\mathbb{R}\to\mathbb{R}$ defined by $x\mapsto x^2$.}
+
+\thm[]{}{
+	Let $(X,d_X), (Y,d_Y)$ be metric spaces, and let $f:X\to Y$ be continuous. If $X$ is compact, then $f$ is uniformly continuous.
+}
+
+\begin{myproof}
+	TODO: insert proof here
+\end{myproof}
+
+\section{Local Compactness}
+\dfn[1]{Local Compactness}{
+	Let $X$ be a topological space and take $x\in X$.
+	\begin{itemize}
+		\item $X$ is \textbf{locally compact at $x$} if $\exists N$ a compact neighborhood of $x$.
+		\item $X$ is \textbf{locally compact} if it is locally compact at every point.
+	\end{itemize}
+	Warning: this time, we don't require that
+}
