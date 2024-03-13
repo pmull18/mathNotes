@@ -170,11 +170,58 @@ TODO: insert proof of previous theorem, using Lemma
 \end{myproof}
 
 \section{Local Compactness}
-\dfn[1]{Local Compactness}{
+\dfn[]{Local Compactness}{
 	Let $X$ be a topological space and take $x\in X$.
 	\begin{itemize}
 		\item $X$ is \textbf{locally compact at $x$} if $\exists N$ a compact neighborhood of $x$.
 		\item $X$ is \textbf{locally compact} if it is locally compact at every point.
 	\end{itemize}
-	Warning: this time, we don't require that
+	Warning: this time, we don't require that "every neighborhood contains a compact neighborhood".
 }
+
+\ex[]{}{
+	\begin{enumerate}
+		\item Compactness implies local compactness/
+		\item $\mathbb{R}^k$ is locally compact (any closed ball).
+		\item $\mathbb{R}$ is not locally compact at $0$.
+	\end{enumerate}
+}
+
+TODO: insert proofs of examples here
+
+
+\thm[]{}{Let $X$ be a locally compact Hausdorff space. Then $\forall x\in X$, any neighborhood contains a compact neighborhood. Ths implies that open subsets of $X$ are locally compact.}
+
+TODO: insert proof of theorem here (from lecture on 3/4)
+
+\thm[]{}{
+	Let $X$ be a locally compact Hausdorff space such that $\infty\not\in X$. Then there is a unique topology $\mcT_{\barX}\subset \mcP(\barX)$ on $\barX = X\cup\{\infty\}$ such that
+	\begin{enumerate}
+		\item $\forall U\subset X, U\in\mcT_{\barX}$ if and only if $U\in\mcT_{X}$. Note that this implies $\mcT_{X}\subset\mcT_{\barX}$.
+		\item $\barX$ is a compact Hausdorff space.
+	\end{enumerate}
+}
+
+\cor[]{}{
+	Locally compact Hausdorff spaces are exactly open subspaces of compact Hausdorff spaces
+}
+
+\ex[]{}{
+	$\mathbb{R}^d\hookrightarrow\mathbb{S}^d = \{v\in\mathbb{R}^{d+1}: ||v|| = 1\}$
+
+	TODO: complete example later
+}
+
+\begin{myproof}
+	TODO: insert proof of theorem here
+\end{myproof}
+
+
+\thm[]{Tychonoff Theorem}{
+	Any product of compact spaces is compact.
+}
+
+The Tychonoff Theorem is admitted without proof
+
+\ex[]{}{$[0,1]^\mathbb{R}$ is compact}
+
