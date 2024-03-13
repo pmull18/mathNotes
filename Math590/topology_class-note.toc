@@ -14,16 +14,14 @@
 \contentsline {section}{\numberline {3.1}Definition}{29}{section.3.1}%
 \contentsline {section}{\numberline {3.2}Sequential Compactness}{31}{section.3.2}%
 \contentsline {section}{\numberline {3.3}Local Compactness}{32}{section.3.3}%
-\contentsline {chapter}{\numberline {4}Equivalence of Norms}{34}{chapter.4}%
-\contentsline {subsubsection}{If Part:-}{35}{section*.2}%
-\contentsline {subsubsection}{Only If Part:-}{35}{section*.3}%
-\contentsline {chapter}{\numberline {5}Compactness}{37}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Sequentially Compact}{37}{section.5.1}%
-\contentsline {subsubsection}{A closed interval $\boldsymbol {[a, b]}$ in $\mathbb {R}$ is sequentially compact}{37}{section*.4}%
-\contentsline {subsubsection}{$\boldsymbol {[a_1,b_1]\times [a_2,b_2]\times \cdots \times [a_n,b_n]\subset \mathbb {R}^n}$ is sequentially compact (w.r.t $\boldsymbol {p-}$norm for $\boldsymbol {p=1,2,\infty }$. Later for any norm)}{38}{section*.5}%
-\contentsline {subsubsection}{Every closed subset of a sequentially compact set is sequentially compact}{38}{section*.6}%
-\contentsline {subsubsection}{If K is sequentially compact then K is closed and bounded}{38}{section*.7}%
-\contentsline {section}{\numberline {5.2}Open Cover and Compactness}{38}{section.5.2}%
-\contentsline {subsubsection}{Only If Part:-}{39}{section*.8}%
-\contentsline {subsubsection}{If Part:-}{39}{section*.9}%
+\contentsline {chapter}{\numberline {4}Countability}{34}{chapter.4}%
+\contentsline {chapter}{\numberline {5}Compactness}{35}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Sequentially Compact}{35}{section.5.1}%
+\contentsline {subsubsection}{A closed interval $\boldsymbol {[a, b]}$ in $\mathbb {R}$ is sequentially compact}{35}{section*.2}%
+\contentsline {subsubsection}{$\boldsymbol {[a_1,b_1]\times [a_2,b_2]\times \cdots \times [a_n,b_n]\subset \mathbb {R}^n}$ is sequentially compact (w.r.t $\boldsymbol {p-}$norm for $\boldsymbol {p=1,2,\infty }$. Later for any norm)}{36}{section*.3}%
+\contentsline {subsubsection}{Every closed subset of a sequentially compact set is sequentially compact}{36}{section*.4}%
+\contentsline {subsubsection}{If K is sequentially compact then K is closed and bounded}{36}{section*.5}%
+\contentsline {section}{\numberline {5.2}Open Cover and Compactness}{36}{section.5.2}%
+\contentsline {subsubsection}{Only If Part:-}{37}{section*.6}%
+\contentsline {subsubsection}{If Part:-}{37}{section*.7}%
 \contentsfinish 
